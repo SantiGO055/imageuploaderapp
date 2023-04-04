@@ -1,13 +1,1 @@
-<div>
-    <img *ngIf="_imageUrl" [src]="_imageUrl" alt="Avatar" class="avatar image" style="height: 150px; width: 150px" />
-</div>
-<div *ngIf="!_imageUrl" class="avatar no-image" style="height: 150px; width: 150px"></div>
-<div style="height: 402px; width: 469px">
-    <label class="button primary block" for="single">
-        {{ uploading ? 'Uploading ...' : 'Upload' }}
-    </label>
-    <input style="visibility: hidden;position: absolute" type="file" id="single" accept="image/*"
-        (change)="uploadImage($event)" [disabled]="uploading" />
-</div>
-
 <app-box-archive></app-box-archive>

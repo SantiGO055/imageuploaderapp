@@ -40,6 +40,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
+
     line-height: 15px;
     /* identical to box height */
 
@@ -52,9 +53,56 @@
 
 }
 
+.or {
+
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.035em;
+
+    /* Gray 4 */
+
+    color: #BDBDBD;
+}
+
 img {
     box-sizing: border-box;
 
+    left: 46.06%;
+    right: 46.02%;
+    top: 42.94%;
+    bottom: 48.88%;
+    background: #BDBDBD;
+
+}
+
+input {
+    width: 101px;
+    height: 31.98px;
+    left: 670.64px;
+    top: 705.39px;
+
+
+    /* Blue 1 */
+
+    background: #2F80ED;
+    border-radius: 8px;
+}
+
+.containerImage {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    display: flex;
     width: 338px;
     height: 218.9px;
     left: 551.82px;
@@ -65,14 +113,18 @@ img {
     border-radius: 12px;
 }
 
-input {
-    width: 101px;
-    height: 31.98px;
-    left: 670.64px;
-    top: 705.39px;
+.textincontainerimage {
 
-    /* Blue 1 */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
 
-    background: #2F80ED;
-    border-radius: 8px;
+    letter-spacing: -0.035em;
+
+    /* Gray 4 */
+
+    color: #BDBDBD;
 }

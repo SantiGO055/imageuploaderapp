@@ -5,8 +5,13 @@
     <p class="subtitle">
         File should be Jpeg, Png
     </p>
-    <img src="../../../assets/image.svg">
-    <p class="subtitle">
+    <div class="containerImage">
+        <img src="../../../assets/image.svg">
+        <p class="textincontainerimage">
+            Drag & Drop your image here
+        </p>
+    </div>
+    <p class="or">
         or
     </p>
     <label class="button primary block" for="single">
@@ -14,5 +19,5 @@
     </label>
     <input style="visibility: hidden;position: absolute" type="file" id="single" accept="image/*"
         (change)="uploadImage($event)" [disabled]="uploading" />
-
+    <button type="button" class="btn btn-primary"></button>
 </div>
