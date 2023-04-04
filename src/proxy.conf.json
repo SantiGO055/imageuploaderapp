@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "https://mzkcizltqfvhbjhscuhn.supabase.co",
+        "secure": false
+    }
+}

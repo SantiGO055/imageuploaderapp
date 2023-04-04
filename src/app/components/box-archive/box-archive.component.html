@@ -1,0 +1,18 @@
+<div class="box">
+    <p class="title">
+        Upload your image
+    </p>
+    <p class="subtitle">
+        File should be Jpeg, Png
+    </p>
+    <img src="../../../assets/image.svg">
+    <p class="subtitle">
+        or
+    </p>
+    <label class="button primary block" for="single">
+        {{ uploading ? 'Uploading ...' : 'Upload' }}
+    </label>
+    <input style="visibility: hidden;position: absolute" type="file" id="single" accept="image/*"
+        (change)="uploadImage($event)" [disabled]="uploading" />
+
+</div>
