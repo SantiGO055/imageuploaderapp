@@ -2,6 +2,8 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { SupabaseService } from '../../services/supabase.service'
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser'
 import { FirebaseService } from 'src/app/services/firebase.service';
+import { Observable, Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-main',
@@ -10,9 +12,10 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class MainComponent implements OnInit {
   _imageUrl: SafeResourceUrl | undefined
-  uploading = false
-  upload: String = ''
+  uploaded = false
 
+  upload: String = ''
+  url: string = ''
   constructor(private readonly storage: FirebaseService, private readonly dom: DomSanitizer) { }
 
   set imageUrl(url: string | null) {
@@ -22,25 +25,31 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.uploaded = false
   }
 
-  async downloadImage(path: string) {
+  async downloadImage(fileName: string) {
+    var retorno
     try {
-      // const { data } = await this.supabase.downLoadImage(path)
-      // if (data instanceof Blob) {
-      //   this._imageUrl = this.dom.bypassSecurityTrustResourceUrl(URL.createObjectURL(data))
-      // }
+      retorno = this.storage.referenciaCloudStorage(fileName).getDownloadURL()
+
     } catch (error) {
       if (error instanceof Error) {
         console.error('Error downloading image: ', error.message)
       }
     }
+    finally {
+      return retorno
+    }
+
   }
 
   async uploadImage(event: any) {
+
+    this.uploaded = true
     try {
-      this.uploading = true
+
+
       if (!event.target.files || event.target.files.length === 0) {
         throw new Error('You must select an image to upload.')
       }
@@ -50,20 +59,22 @@ export class MainComponent implements OnInit {
       const fileExt = file.name.split('.').pop()
       const filePath = `${Math.random()}.${fileExt}`
 
-      console.log(file)
-      console.log(fileExt)
-      console.log(filePath)
 
-      console.log(this.storage.tareaCloudStorage(fileName, file).percentageChanges().subscribe(val => console.log(val)))
-      // await this.supabase.uploadImage(filePath, file)
-      this.upload = filePath
-      console.log(this.storage.referenciaCloudStorage(fileName).getDownloadURL().subscribe(a => console.log(a)))
+      this.storage.tareaCloudStorage(fileName, file);
+      this.downloadImage(fileName).then(a => a?.subscribe(response => this.url = response))
+
+
+
+
+
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message)
       }
     } finally {
-      this.uploading = false
+      this.uploaded = false;
+
+
     }
   }
 

@@ -1,0 +1,29 @@
+.box {
+
+
+    padding: 5% 5%;
+    width: 402px;
+    height: 143.57px;
+    left: 519.82px;
+    top: 455.35px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+label {
+    padding: 0 0 5% 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+    letter-spacing: -0.035em;
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+
+}

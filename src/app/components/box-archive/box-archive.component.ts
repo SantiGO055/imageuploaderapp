@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-box-archive',
@@ -6,14 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./box-archive.component.css']
 })
 export class BoxArchiveComponent implements OnInit {
-  uploading = false
+
+
+  @Output() newItemEvent = new EventEmitter<any>();
+
+  @Input() url = '';
+  @Input() uploaded = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  uploadImage(event: any) {
 
+  async uploadImage(event: any) {
+    // console.log(event)
+    this.newItemEvent.emit(event);
   }
 
 }

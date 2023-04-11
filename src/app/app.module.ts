@@ -10,12 +10,14 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { BoxArchiveComponent } from './components/box-archive/box-archive.component';
+import { UploadingComponent } from './components/uploading/uploading.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    BoxArchiveComponent
+    BoxArchiveComponent,
+    UploadingComponent
   ],
   imports: [
     BrowserModule,

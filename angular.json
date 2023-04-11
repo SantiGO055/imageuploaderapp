@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -70,10 +74,7 @@
               "browserTarget": "imageUploaderApp:build:development"
             }
           },
-          "defaultConfiguration": "development",
-          "options": {
-            "browserTarget": "image-uploader-app:build"
-          }
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -93,13 +94,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/jquery/dist/jquery.js"
-            ]
+            "scripts": []
           }
         }
       }
