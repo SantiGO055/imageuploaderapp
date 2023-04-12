@@ -44,18 +44,18 @@ export class MainComponent implements OnInit {
 
   }
 
-  async uploadImage(event: any) {
+  async uploadImage(files: any) {
 
     this.uploaded = true
     try {
+      console.log(files)
 
-
-      if (!event.target.files || event.target.files.length === 0) {
+      if (!files || files.length === 0) {
         throw new Error('You must select an image to upload.')
       }
 
-      const file = event.target.files[0]
-      const fileName = event.target.files[0].name
+      const file = files[0]
+      const fileName = files[0].name
       const fileExt = file.name.split('.').pop()
       const filePath = `${Math.random()}.${fileExt}`
 
@@ -72,7 +72,7 @@ export class MainComponent implements OnInit {
         alert(error.message)
       }
     } finally {
-      this.uploaded = false;
+
 
 
     }

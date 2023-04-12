@@ -1,6 +1,7 @@
 <div class="boxArchive">
     <app-box-archive (newItemEvent)="uploadImage($event)" [uploaded]="this.uploaded" [url]="this.url"></app-box-archive>
-    <app-uploading class="uploading" *ngIf="this.uploaded && !this.url" (uploaded)="uploaded"></app-uploading>
+    <app-uploading class="uploading" *ngIf="this.uploaded && !this.url"></app-uploading>
+    <!-- <app-uploading class="uploading" (uploaded)="uploaded"></app-uploading> -->
 </div>
 <footer>created by <a href="https://github.com/santigo055" target="_blank">SantiGO055</a> -
     <a href="devchallenges.io" target="_blank">devChallenges.io</a>

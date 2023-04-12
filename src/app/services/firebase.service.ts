@@ -27,12 +27,14 @@ export class FirebaseService {
 
       uploadTask.percentageChanges().subscribe((percent) => {
         this.uploadProgressSubject.next(percent)
+        console.log(percent)
       })
       uploadTask.snapshotChanges().pipe(
         finalize(() => {
           storageRef.getDownloadURL().subscribe((downloadURL: any) => {
 
             resolve(downloadURL);
+            console.log(downloadURL)
           });
         })
       ).subscribe((task) => { }, (error) => { reject(error) });

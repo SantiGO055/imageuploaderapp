@@ -11,13 +11,15 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { BoxArchiveComponent } from './components/box-archive/box-archive.component';
 import { UploadingComponent } from './components/uploading/uploading.component';
+import { DndDirective } from './dnd.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     BoxArchiveComponent,
-    UploadingComponent
+    UploadingComponent,
+    DndDirective
   ],
   imports: [
     BrowserModule,
