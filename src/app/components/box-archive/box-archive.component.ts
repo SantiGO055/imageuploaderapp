@@ -17,12 +17,10 @@ export class BoxArchiveComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  copyToClipboard(inputElement: any) {
-    inputElement.select();
-    document.execCommand('copy');
-    inputElement.setSelectionRange(0, 0);
-  }
 
+  copyToClipboard() {
+    navigator.clipboard.writeText(this.url)
+  }
   async uploadImage(event: any) {
     console.log(event)
     this.newItemEvent.emit(event);

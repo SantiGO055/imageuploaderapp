@@ -13,6 +13,7 @@ import { BoxArchiveComponent } from './components/box-archive/box-archive.compon
 import { UploadingComponent } from './components/uploading/uploading.component';
 import { DndDirective } from './dnd.directive';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { DndDirective } from './dnd.directive';
     AngularFireModule.initializeApp(environment.firebaseConfig, 'image-uploader-app'),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
