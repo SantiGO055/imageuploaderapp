@@ -13,7 +13,15 @@ import { BoxArchiveComponent } from './components/box-archive/box-archive.compon
 import { UploadingComponent } from './components/uploading/uploading.component';
 import { DndDirective } from './dnd.directive';
 
-
+var firebaseConfig = {
+  apiKey: environment.apiKey,
+  authDomain: environment.authDomain,
+  projectId: environment.projectId,
+  storageBucket: environment.storageBucket,
+  messagingSenderId: environment.messagingSenderId,
+  appId: environment.appId,
+  measurementId: environment.measurementId
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +33,8 @@ import { DndDirective } from './dnd.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'image-uploader-app'),
+    // AngularFireModule.initializeApp(environment.firebaseConfig, 'image-uploader-app'),
+    AngularFireModule.initializeApp(firebaseConfig, 'image-uploader-app'),
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
