@@ -13,8 +13,8 @@ npm-debug.log
 yarn-error.log
 
 
-/src/environments/environment.prod.ts
-/src/environments/environment.ts
+/src/environments/environment.prod.ts.old
+/src/environments/environment.ts.old
 # IDEs and editors
 .idea/
 .project
