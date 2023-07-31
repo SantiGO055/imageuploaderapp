@@ -13,15 +13,15 @@ import { BoxArchiveComponent } from './components/box-archive/box-archive.compon
 import { UploadingComponent } from './components/uploading/uploading.component';
 import { DndDirective } from './dnd.directive';
 
-var firebaseConfig = {
-  apiKey: process.env['apiKey'],
-  authDomain: process.env['authDomain'],
-  projectId: process.env['projectId'],
-  storageBucket: process.env['storageBucket'],
-  messagingSenderId: process.env['messagingSenderId'],
-  appId: process.env['appId'],
-  measurementId: process.env['measurementId']
-}
+// var firebaseConfig = {
+//   apiKey: process.env['apiKey'],
+//   authDomain: process.env['authDomain'],
+//   projectId: process.env['projectId'],
+//   storageBucket: process.env['storageBucket'],
+//   messagingSenderId: process.env['messagingSenderId'],
+//   appId: process.env['appId'],
+//   measurementId: process.env['measurementId']
+// }
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,7 @@ var firebaseConfig = {
     BrowserModule,
     AppRoutingModule,
     // AngularFireModule.initializeApp(environment.firebaseConfig, 'image-uploader-app'),
-    AngularFireModule.initializeApp(firebaseConfig, 'image-uploader-app'),
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'image-uploader-app'),
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,

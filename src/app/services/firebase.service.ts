@@ -14,10 +14,10 @@ export class FirebaseService {
   private uploadProgressSubject = new Subject<any>();
   constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) {
 
-    var prueba = db.object('a')
+    // var prueba = db.object('a')
     // db.list('a').push({ 'asd': 'asdasdasdadsa' })
     // prueba.set({ 'asd123': 'aaaaaaa¿aaaa' }) // crea o updatea en caso de que exista
-    prueba.valueChanges().subscribe(val => console.log(val))
+    // prueba.valueChanges().subscribe(val => console.log(val))
   }
 
   //Tarea para subir archivo
