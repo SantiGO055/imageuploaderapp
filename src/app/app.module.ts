@@ -13,6 +13,7 @@ import { BoxArchiveComponent } from './components/box-archive/box-archive.compon
 import { UploadingComponent } from './components/uploading/uploading.component';
 import { DndDirective } from './dnd.directive';
 
+
 // var firebaseConfig = {
 //   apiKey: process.env['apiKey'],
 //   authDomain: process.env['authDomain'],

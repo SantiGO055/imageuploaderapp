@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run config && ng build --configuration production",
+    "build": "npm run config && ng build --configuration deployment",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "config": "ts-node-esm ./config.index.ts"
@@ -24,6 +24,7 @@
     "bootstrap": "^5.2.3",
     "firebase": "^9.19.1",
     "jquery": "^3.6.4",
+    "ng-process-env": "^16.0.6",
     "process": "^0.11.10",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
