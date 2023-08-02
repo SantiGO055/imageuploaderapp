@@ -6,7 +6,7 @@
 [build]
   base    = ""
   publish = "build"
-  command = "npm run config -- --environment=prod && ng build --prod"
+  command = "npm run config -- --environment=prod && ng build"
 
 [config]
   command = "ts-node ./src/assets/scripts/setEnv.ts"
