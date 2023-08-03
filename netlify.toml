@@ -4,8 +4,8 @@
 # “command” is your build command.
 
 [build]
-  base    = ""
-  publish = "dist/"
+  base    = "/"
+  publish = "dist"
   command = "npm run config -- --environment=prod && ng build"
 
 [config]
