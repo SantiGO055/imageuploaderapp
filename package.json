@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@supabase/supabase-js": "^2.14.0",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.1",
     "firebase": "^9.19.1",
     "jquery": "^3.6.4",
     "ng-process-env": "^16.0.6",
