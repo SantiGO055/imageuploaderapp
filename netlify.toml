@@ -15,5 +15,5 @@
   command = "npm run config -- --environment=dev &&  ng serve"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html 200"
+  from = "/* "
+  to = " /index.html"
