@@ -86,6 +86,6 @@ $ npm start
 
 ## Contact
 
-- Website [https://portfolio-santiago.netlify.app/]({https://portfolio-santiago.netlify.app/})
+- Website [https://portfolio-santiago.netlify.app/](https://portfolio-santiago.netlify.app/)
 - GitHub [@SantiGO055](https://github.com/SantiGO055)
 <!-- - Twitter [@your-twitter](https://twitter.com/your-username) -->
