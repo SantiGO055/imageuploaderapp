@@ -13,7 +13,3 @@
 
 [start]
   command = "npm run config -- --environment=dev &&  ng serve"
-
-[[redirects]]
-  from = "/* "
-  to = " /index.html"
