@@ -5,7 +5,7 @@
 
 [build]
   base    = "/"
-  publish = "dist"
+  publish = "dist/image-uploader-app"
   command = "npm run config -- --environment=prod && ng build"
 
 [config]
@@ -13,3 +13,8 @@
 
 [start]
   command = "npm run config -- --environment=dev &&  ng serve"
+
+[[redirects]]
+  from = "/*"
+  to = "index.html"
+  status = 200
