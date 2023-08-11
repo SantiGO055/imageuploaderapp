@@ -74,13 +74,12 @@
 
 img {
     box-sizing: border-box;
-
     left: 46.06%;
     right: 46.02%;
     top: 42.94%;
     bottom: 48.88%;
-
-
+    height: auto;
+    max-width: 100%;
 }
 
 .uploading {

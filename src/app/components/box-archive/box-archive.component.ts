@@ -22,11 +22,11 @@ export class BoxArchiveComponent implements OnInit {
     navigator.clipboard.writeText(this.url)
   }
   async uploadImage(event: any) {
-    console.log(event)
+    // console.log(event)
     this.newItemEvent.emit(event);
   }
   dragDrop(event: any) {
-    console.log(event)
+    // console.log(event)
     this.uploadImage(event);
   }
   buttonUpload(event: any) {

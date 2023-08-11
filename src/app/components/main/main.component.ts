@@ -35,7 +35,7 @@ export class MainComponent implements OnInit {
 
     } catch (error) {
       if (error instanceof Error) {
-        console.error('Error downloading image: ', error.message)
+        // console.error('Error downloading image: ', error.message)
       }
     }
     finally {
@@ -48,7 +48,7 @@ export class MainComponent implements OnInit {
 
     this.uploaded = true
     try {
-      console.log(files)
+      // console.log(files)
 
       if (!files || files.length === 0) {
         throw new Error('You must select an image to upload.')
@@ -60,8 +60,11 @@ export class MainComponent implements OnInit {
       const filePath = `${Math.random()}.${fileExt}`
 
 
-      this.storage.tareaCloudStorage(fileName, file);
-      this.downloadImage(fileName).then(a => a?.subscribe(response => this.url = response))
+      this.storage.tareaCloudStorage(fileName, file).then(() => {
+        this.url = this.storage.url;
+      });
+      // this.url = response
+      //this.downloadImage(fileName).then(a => a?.subscribe(response => response != null ? this.url = response : null))
 
 
 

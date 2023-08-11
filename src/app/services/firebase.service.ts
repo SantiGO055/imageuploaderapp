@@ -12,6 +12,7 @@ export class FirebaseService {
   public loading: boolean = false;
   uploadProgress: Observable<number> = new Observable;
   private uploadProgressSubject = new Subject<any>();
+  url: string = '';
   constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) {
 
     // var prueba = db.object('a')
@@ -28,14 +29,14 @@ export class FirebaseService {
 
       uploadTask.percentageChanges().subscribe((percent) => {
         this.uploadProgressSubject.next(percent)
-        console.log(percent)
+        // console.log(percent)
       })
       uploadTask.snapshotChanges().pipe(
         finalize(() => {
           storageRef.getDownloadURL().subscribe((downloadURL: any) => {
-
+            this.url = downloadURL;
             resolve(downloadURL);
-            console.log(downloadURL)
+            // console.log(downloadURL)
           });
         })
       ).subscribe((task) => { }, (error) => { reject(error) });
@@ -49,6 +50,7 @@ export class FirebaseService {
 
   //Referencia del archivo
   public referenciaCloudStorage(nombreArchivo: string) {
+
     return this.storage.ref(nombreArchivo);
   }
 }
